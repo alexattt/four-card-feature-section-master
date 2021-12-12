@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/***** some base definitions from https://piccalil.li/blog/a-modern-css-reset/ *****/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/***** main styles *****/
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #a3a5ae;
+  background-color: #fafafa;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 100px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+  .main-container {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main-container {
+    padding: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-container {
+    padding: 30px;
+  }
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 60px;
+  width: 35vw;
+}
+
+.title-container .title-1, .title-container .title-2 {
+  font-size: 32px;
+  color: #4c4e61;
+}
+
+@media screen and (max-width: 1200px) {
+  .title-container .title-1, .title-container .title-2 {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .title-container .title-1, .title-container .title-2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .title-container .title-1, .title-container .title-2 {
+    font-size: 18px;
+  }
+}
+
+.title-container .title-2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 485px) {
+  .title-container .desc {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .title-container {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title-container {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 378px) {
+  .title-container {
+    width: 80vw;
+  }
+}
+
+.card-container {
+  gap: 30px;
+}
+
+.card-container .card {
+  background-color: white;
+  height: 300px;
+  border-radius: 10px;
+  padding: 20px 35px;
+  font-size: 14px;
+  -webkit-box-shadow: 0px 15px 35px -12px rgba(115, 123, 197, 0.4);
+          box-shadow: 0px 15px 35px -12px rgba(115, 123, 197, 0.4);
+}
+
+.card-container .card .card-title {
+  color: #4c4e61;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-container .card-one {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  border-top: 5px solid #45d3d3;
+  background-image: url(./images/icon-supervisor.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 85%;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+@media screen and (min-width: 800px) {
+  .card-container .card-one {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.card-container .card-one:hover {
+  background-color: rgba(69, 211, 211, 0.05);
+}
+
+.card-container .middle-card-container {
+  gap: 30px;
+}
+
+.card-container .middle-card-container .card-two {
+  border-top: 5px solid #ea5353;
+  background-image: url(./images/icon-team-builder.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 85%;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.card-container .middle-card-container .card-two:hover {
+  background-color: rgba(234, 83, 83, 0.05);
+}
+
+.card-container .middle-card-container .card-three {
+  border-top: 5px solid #fcaf4a;
+  background-image: url(./images/icon-karma.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 85%;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.card-container .middle-card-container .card-three:hover {
+  background-color: rgba(252, 175, 74, 0.05);
+}
+
+@media screen and (min-width: 800px) {
+  .card-container .middle-card-container {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card-container .middle-card-container {
+    -webkit-box-flex: 1.2;
+        -ms-flex: 1.2;
+            flex: 1.2;
+  }
+}
+
+.card-container .card-four {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-top: 5px solid #549ef2;
+  background-image: url(./images/icon-calculator.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 85%;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+@media screen and (min-width: 800px) {
+  .card-container .card-four {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.card-container .card-four:hover {
+  background-color: rgba(84, 158, 242, 0.05);
+}
+
+@media screen and (max-width: 800px) {
+  .card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.attribution {
+  text-align: center;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.attribution a {
+  color: #549ef2;
+}
+/*# sourceMappingURL=styles.css.map */
